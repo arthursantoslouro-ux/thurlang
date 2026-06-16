@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "interp.h"
+
+
+int main(int argc, char *argv[]) {
+char *nomedoarquivo = argv[1];
+
+FILE *arquivo = fopen(nomedoarquivo, "r");
+
+if (!arquivo) {
+    printf("thurlang: arquivo nao existe\n");
+}
+
+interpretar(nomedoarquivo);
+
+fclose(arquivo);
+
+return 0;
+
+}
