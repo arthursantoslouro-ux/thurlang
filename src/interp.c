@@ -2,6 +2,7 @@
 #include "interp.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "lexer.h"
 
 void interpretar(char *nomearquivo) {
 
@@ -38,6 +39,13 @@ while (fgets(linha, sizeof(linha), arquivo)) {
         printf("thurlang: erro na linha %d: comando desconhecido -> '%s'\n",
                linha_num, linha);
     }
+
+    
+
+lexer(arquivo);
+
+
+
 }
     fclose(arquivo);
 }
