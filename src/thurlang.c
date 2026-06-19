@@ -11,6 +11,7 @@ FILE *arquivo = fopen(nomedoarquivo, "r");
 
 if (!arquivo) {
     printf("thurlang: arquivo nao existe\n");
+    fclose(arquivo);
 }
 
 interpretar(nomedoarquivo);
